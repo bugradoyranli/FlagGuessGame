@@ -4,7 +4,7 @@ let countries = [];
 // API'den ülke çekme.
 async function fetchCountries() {
   try {
-    const response = await fetch('https://restcountries.com/v3.1/all');
+    const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,cca2');
     const data = await response.json();
     // Bayrağı ve isim bilgisi olan ülkeleri filtreleme.
     countries = data.filter(country => 
